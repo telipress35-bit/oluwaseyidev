@@ -80,6 +80,9 @@
     "PHP",
     "Flutter",
     "Firebase",
+    "Next.js",
+    "TypeScript",
+    "Search engine optimisation",
     "API development",
     "Mobile app development",
     "KYC",
@@ -368,6 +371,19 @@ section{scroll-margin-top:80px}
 .card li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--brass)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
 .tag{font-family:var(--f-mono);font-size:.7rem;padding:4px 9px;border-radius:6px;background:var(--cream-2);color:var(--ink-2)}
+.card.wide{grid-column:span 6}
+.card.client{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(22px,3vw,40px);align-items:center}
+.client-copy{display:flex;flex-direction:column;gap:16px;min-width:0}
+.client-copy .tags{margin-top:0}
+.client-link{align-self:flex-start;font-weight:600;font-size:.95rem;color:var(--green);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.client-link .arr{display:inline-block;transition:transform .4s var(--ease)}
+.client-link:hover .arr{transform:translate(3px,-3px)}
+.client-shot{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--night);box-shadow:0 30px 60px -34px rgba(29,27,22,.55);transition:transform .6s var(--ease)}
+.client-shot img{display:block;width:100%;height:auto}
+.card.client:hover .client-shot{transform:translateY(-4px) rotate(-.4deg)}
+.browser-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:var(--cream-2);border-bottom:1px solid var(--line);font-family:var(--f-mono);font-size:.68rem;color:var(--ink-2)}
+.browser-bar i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.browser-bar span{margin-left:8px;padding:2px 10px;border-radius:999px;background:var(--paper)}
 .card .glyph{position:absolute;right:-20px;top:-26px;font-family:var(--f-display);font-weight:800;font-size:9rem;color:var(--cream-2);line-height:1;z-index:0;pointer-events:none;transition:transform .7s var(--ease)}
 .card:hover .glyph{transform:translate(-10px,10px) rotate(-6deg)}
 .card>*:not(.glyph){position:relative;z-index:1}
@@ -488,7 +504,9 @@ footer{padding-block:40px 50px}
   .hero-grid,.about-grid,.flag-top,.contact-grid{grid-template-columns:1fr}
   .sec-head{grid-template-columns:1fr}.sec-head p{justify-self:start}
   .modules{grid-template-columns:repeat(2,1fr)}
-  .card,.card.third{grid-column:span 6}
+  .card,.card.third,.card.wide{grid-column:span 6}
+  .card.client{grid-template-columns:1fr}
+  .client-shot{order:-1}
   .eng{grid-template-columns:1fr 1fr}
   .eng-item,.eng-item:not(:nth-child(3n+1)){padding:24px 20px 26px 0;border-left:0}
   .eng-item:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}
@@ -687,6 +705,30 @@ footer{padding-block:40px 50px}
             <li>AI blog pipeline on WordPress using Groq Llama 3.3 70B and Pexels imagery</li>
           </ul>
           <div class="tags"><span class="tag">Node.js</span><span class="tag">WordPress</span><span class="tag">Groq LLM</span><span class="tag">Pexels API</span></div>
+        </article>
+
+        <!-- Client build: OBCER -->
+        <article class="card wide client reveal" id="obcer">
+          <div class="client-copy">
+            <div class="card-top"><span class="badge live">● Live</span><span class="mono" style="color:var(--ink-2)">Client build · Website + Journal</span></div>
+            <h3>OBCER</h3>
+            <p class="desc">The full website, open‑access academic journal and admin panel for the Organisation for Biodiversity Conservation and Environmental Research. Designed, built, deployed and indexed by me.</p>
+            <ul>
+              <li>Admin panel with Google sign‑in: staff run news, conferences, leadership, partners, photo albums and journal issues with PDF uploads</li>
+              <li>Every article, issue, post and album is a prerendered, search‑optimised page with Google Scholar citation tags and structured data</li>
+              <li>Animated rainforest design whose sky follows Nigerian time, from dawn to night, and respects reduced‑motion settings</li>
+              <li>Zero hosting bill on Firebase and Supabase free tiers, with server‑side security rules and GitHub Actions deploys</li>
+            </ul>
+            <div class="tags"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Firebase</span><span class="tag">Supabase</span><span class="tag">GitHub Actions</span><span class="tag">SEO</span></div>
+            <a class="client-link" href="https://obcer.org.ng" target="_blank" rel="noopener">Visit obcer.org.ng <span class="arr" aria-hidden="true">↗</span></a>
+          </div>
+          <a class="client-shot" href="https://obcer.org.ng" target="_blank" rel="noopener" aria-label="Open obcer.org.ng">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>obcer.org.ng</span></span>
+            <picture>
+              <source srcset="obcer-site.webp" type="image/webp">
+              <img src="obcer-site.jpg" alt="OBCER website homepage with an illustrated rainforest and the organisation's seal" width="1200" height="712" loading="lazy" decoding="async">
+            </picture>
+          </a>
         </article>
 
         <article class="card third reveal">
